@@ -62,14 +62,12 @@ class CampsiteInfo extends Component {
     };
   }
   markFavorite() {
-    console.log("Info, mark called");
     this.setState({ favorite: true });
   }
   static navigationOptions = {
     title: "Campsite Information",
   };
   render() {
-    console.log("hello");
     const campsiteId = this.props.navigation.getParam("campsiteId");
     const campsite = this.state.campsites.filter(
       (campsite) => campsite.id === campsiteId
